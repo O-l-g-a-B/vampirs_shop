@@ -23,27 +23,63 @@
     <link rel="stylesheet" href="/assets/styles/remodal-default-theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link
+			href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
 
 </head>
 
 
 <body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#store" class="nav__link">Store</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a href="#reviews" class="nav__link">Reviews</a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+            <div class="nav__cart">
+                <i class="bx bx-cart"></i>
+            </div>
+            <!-- <a href="#" class="button button__header">Order Now</a> -->
+        </nav>
+        <h1>Welcome to our store!</h1>
+				
+					
+				
+    </header>
 
 
-
-
-
+</div>
     <!--ВКЛАДКИ-->
     <section class="gallery__tabs">
         <!--Названия вкладок-->
         <input type="radio" name="inset" value="" id="tab_light" checked>
-        <label for="tab_light">ОДЕЖДА</label>
+        <label for="tab_light">Clothes</label>
 
         <input type="radio" name="inset" value="" id="tab_decor">
-        <label for="tab_decor">КОСМЕТИКА</label>
+        <label for="tab_decor">Cosmetics</label>
 
         <input type="radio" name="inset" value="" id="tab_furniture">
-        <label for="tab_furniture">БАНК КРОВИ</label>
+        <label for="tab_furniture">Blood Bank</label>
 
 
 
@@ -329,9 +365,49 @@
             <div class="remodal-bg">
                 <a href="#modal4"><img src="/assets/images/hats/hat2.jfif" alt="light2"></a><br>
             </div>
-
+            
     </section>
     <!--GALLERY SECTION END-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="column__wrapper">
+                    <div class="footer__column column__text--bold">
+                        <div class="column__item column__text--bold">Sign up for email</div>
+                        <div class="column__item column__text--bold">become a member</div>
+                        <div class="column__item column__text--bold">gift cards</div>
+                        <div class="column__item column__text--bold">site feedback</div>
+                    </div>
+                    <div class="footer__column">
+                        <div class="column__item">Get help</div>
+                        <div class="column__item">Order status</div>
+                        <div class="column__item">Delivery</div>
+                        <div class="column__item">Returns</div>
+                        <div class="column__item">Payment options</div>
+                        <div class="column__item">Contact us</div>
+                    </div>
+                    <div class="footer__column">
+                        <div class="column__item">News</div>
+                        <div class="column__item column__text--bold">About us</div>
+                        <div class="column__item">Careers</div>
+                        <div class="column__item">Investors</div>
+                    </div>
+            </div>
+            <div class="footer__column column--last">
+                <div class="column__item">social</div>
+                <div class="column__item column__icon-container">
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://www.youtube.com"><i class="fab fa-youtube-square fa-2x"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/e6f7138599.js" crossorigin="anonymous"></script>
 
 
 
@@ -407,35 +483,36 @@
             }, '300');
         });
     </script>
+<script>
+    /*=============== SHOW MENU ===============*/
+			const showMenu = (toggleId, navId) => {
+				const toggle = document.getElementById(toggleId);
+				const nav = document.getElementById(navId);
 
+				//validate that variable exists
+				if (toggle && nav) {
+					toggle.addEventListener('click', () => {
+						//adds the show-menu class to the div tag with the
+						nav.classList.toggle('show-menu');
+					});
+				}
+			};
+
+			showMenu('nav-toggle', 'nav-menu');
+
+			/*=============== REMOVE MENU MOBILE ===============*/
+			const navLink = document.querySelectorAll('.nav__link');
+
+			function linkAction() {
+				const navMenu = document.getElementById('nav-menu');
+				//when click on each nav__link, we remove show-menu
+				navMenu.classList.remove('show-menu');
+			}
+			navLink.forEach((n) => n.addEventListener('click', linkAction));
+</script>
 
 </body>
 
-<html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Вампирёныш</title>
-    <link rel="stylesheet" type="text/css" href="\styles\style.css">
-    <link rel="shortcut icon" href="\assets header\99c6540ab3df51da45c66f9e6b79006f_photo-resizer.ru (1).png"
-        type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comforter&family=Comforter+Brush&family=Cormorant+Infant:wght@500&family=Marck+Script&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-
-    <header class="header">
-        <h1 id="companyname">Добро пожаловать в наш магазин</h1>
-    </header>
-
-
-
-</body>
 
 </html>
