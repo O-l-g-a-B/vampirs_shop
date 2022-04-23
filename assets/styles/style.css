@@ -5,7 +5,14 @@
 	padding: 0;
 	margin: 0;
 }
+#Desktop{width: 100%;height: auto;
+    padding: 8% 0% 0% 0%;}
 
+.foto_header{
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	max-width: 100%;}
 body {
 	background-color: black;
 	font-family: Open Sans, Arial, sans-serif;
